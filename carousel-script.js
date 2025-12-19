@@ -48,7 +48,7 @@ function initCarousel() {
 
         slideEl.innerHTML = `
             ${contentHTML}
-            <div class="carousel-caption" style="text-align: center;">
+            <div class="slide-caption" style="text-align: center;">
                 <h3 style="text-align: center; margin: 0 auto;">${slide.title || ''}</h3>
                 <p style="text-align: center; margin: 0 auto;">${slide.caption || ''}</p> 
             </div>

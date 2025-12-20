@@ -18,8 +18,15 @@ function initCarousel() {
 
         let contentHTML = '';
 
-        // 1. Logic for Bullets
-        if (slide.bullets && Array.isArray(slide.bullets)) {
+        // 1. Logic for Embed (Airbnb, etc.)
+        if (slide.embed) {
+            contentHTML = `
+                <div class="embed-slide-content">
+                    ${slide.embed}
+                </div>`;
+        }
+        // 2. Logic for Bullets
+        else if (slide.bullets && Array.isArray(slide.bullets)) {
             contentHTML = `
                 <div class="text-slide-content">
                     <ul class="bullet-list">
@@ -27,7 +34,7 @@ function initCarousel() {
                     </ul>
                 </div>`;
         } 
-        // 2. Logic for Multiple Images (Array of 2 or more)
+        // 3. Logic for Multiple Images (Array of 2 or more)
         else if (slide.images && Array.isArray(slide.images) && slide.images.length > 1) {
             contentHTML = `
                 <div class="image-grid">
@@ -38,7 +45,7 @@ function initCarousel() {
                     `).join('')}
                 </div>`;
         } 
-        // 3. Logic for Single Image (Either as a string OR as an array with 1 item)
+        // 4. Logic for Single Image (Either as a string OR as an array with 1 item)
         else {
             const imgSrc = slide.image || (slide.images && slide.images[0]);
             if (imgSrc) {

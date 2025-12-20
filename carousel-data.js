@@ -93,6 +93,39 @@ const projectSlides = [
         caption: '2010 Here we are building the pool project.'
     },
 
+    {
+    images: ['img/morracan suite.jpg'],
+    title: 'Moroccan Suite',
+    caption: '2011/2012 After all the construction in the previous slide, this was the result'
+    },
+
+
+    {
+    images: ['img/green room.jpg'],
+    title: 'Green Master Bedroom',
+    caption: '2011/2012 We renovated the Green Room/bath, with new floor, parged walls, copper built-in decorations'
+    },
+
+
+{
+    images: ['img/garden suite.jpg'],
+    title: 'Garden Bedroom',
+    caption: '2012/2014 Laurel and Sebastian built the Garden Bedroom/bath incoperating design cues from the pool build.'
+    },
+
+
+  {
+    images: ['img/front room.jpg'],
+    title: 'Front Room Bed Surround',
+    caption: '2011/2012 Luarel designed the cabinetry, and bed surround as well as the built in in the loft.'
+    },
+
+ {
+    images: ['img/kitchen.JPG'],
+    title: 'Kitchen Bay Window',
+    caption: 'between 2012 and 2014 the big bay window in the kitchen was installed, at the same time the garden was built.'
+    },
+
       {
     images: ['img/casa chica demo.jpg'],
     title: 'Casa Chica Construction',
@@ -108,7 +141,14 @@ const projectSlides = [
      {
     images: ['img/casa chica interor.jpg'],
     title: 'Casa Chica Construction',
-    caption: '2014 Here we are finishing the interior of Casa Chica.'
-}
+    caption: '2014 Here we are finishing the interior of Casa Chica.'   
+},
+
+  {
+    images: ['img/casa chica king.jpg'],
+    title: 'Casa Chica Construction',
+    caption: '2014 Here we are finishing the interior of Casa Chica.'   
+},
+
 
 ];

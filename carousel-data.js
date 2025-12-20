@@ -1,6 +1,5 @@
 const projectSlides = [
     {
-        // TEXT-ONLY SLIDE
         title: 'Project Overview',
         bullets: [
             'I arrived on-site in May 2009.',
@@ -13,9 +12,7 @@ const projectSlides = [
             'between 2014 and 2018 we finished Casa Chica, in what became the largest phase of the project.'
         ]
     },
-
     {
-        // IMAGE GRID SLIDE
         images: [
             'img/tree of life1.JPG',
             'img/tree of life2.JPG',
@@ -28,30 +25,20 @@ const projectSlides = [
     },
     
     {
-    images: ['img/blue bath.jpg'],
-    title: 'Casa Grande Construction',
-    caption: '2009 I installed the  Ula Darney chandalier and sconces.'
+        images: ['img/ula darney.jpg'],
+        title: 'Casa Grande Construction',
+        caption: '2009 I installed the Ula Darney chandalier and sconces.'
     },
-
     {
-    images: ['img/ula darney.jpg'],
-    title: 'Casa Grande Construction',
-    caption: '2009 I installed the  Ula Darney chandalier and sconces.'
+        images: ['img/hallway.jpg'],
+        title: 'Casa Grande Construction',
+        caption: '2009/2010 We installed new plumbing from the kitchen to the street.'
     },
-
     {
-    images: ['img/hallway.jpg'],
-    title: 'Casa Grande Construction',
-    caption: '2009/2010 We installed new plumbing from the kitchen to the street.'
+        images: ['img/security gates.jpg'],
+        title: 'Casa Grande Construction',
+        caption: '2011 Laurel drew a full size rendering of the security gates that we then had fabricated.'
     },
-
-    {
-    images: ['img/security gates.jpg'],
-    title: 'Casa Grande Construction',
-    caption: '2011 Laurel drew a full size rendering of the security gates that we then had fabricated.'
-    },
-
-    
     {
         images: [
             'img/demo.JPG',
@@ -70,10 +57,9 @@ const projectSlides = [
         title: 'Pool Construction Site Clearing',
         caption: '2010 Here we are clearing the site to continue with the pool build.'
     },
-
     {
         images: [
-            'img/pool bath.JPG',
+            'img/pool bath.jpg',
             'img/pool construction.JPG',
             'img/pool construction2.JPG',
             'img/pool construction3.JPG'
@@ -81,74 +67,59 @@ const projectSlides = [
         title: 'Pool Construction',
         caption: '2010 Here we are building the pool project.'
     },
-
     {
         images: [
             'img/pool constuction4.JPG',
             'img/pool construction5.JPG',
-            'img/pool bath.JPG',
-            'img/barrel boveda.JPG'
+            'img/pool bath.jpg',
+            'img/barrel boveda.jpg'
         ],
         title: 'Pool Construction',
         caption: '2010 Here we are building the pool project.'
     },
-
     {
-    images: ['img/morracan suite.jpg'],
-    title: 'Moroccan Suite',
-    caption: '2011/2012 After all the construction in the previous slide, this was the result'
+        images: ['img/morracan suite.jpg'],
+        title: 'Moroccan Suite',
+        caption: '2011/2012 After all the construction in the previous slide, this was the result'
     },
-
-
     {
-    images: ['img/green room.jpg'],
-    title: 'Green Master Bedroom',
-    caption: '2011/2012 We renovated the Green Room/bath, with new floor, parged walls, copper built-in decorations'
+        images: ['img/green room.jpg'],
+        title: 'Green Master Bedroom',
+        caption: '2011/2012 We renovated the Green Room/bath, with new floor, parged walls, copper built-in decorations'
     },
-
-
-{
-    images: ['img/garden suite.jpg'],
-    title: 'Garden Bedroom',
-    caption: '2012/2014 Laurel and Sebastian built the Garden Bedroom/bath incoperating design cues from the pool build.'
+    {
+        images: ['img/garden suite.jpg'],
+        title: 'Garden Bedroom',
+        caption: '2012/2014 Laurel and Sebastian built the Garden Bedroom/bath incoperating design cues from the pool build.'
     },
-
-
-  {
-    images: ['img/front room.jpg'],
-    title: 'Front Room Bed Surround',
-    caption: '2011/2012 Luarel designed the cabinetry, and bed surround as well as the built in in the loft.'
+    {
+        images: ['img/front room.jpg'],
+        title: 'Front Room Bed Surround',
+        caption: '2011/2012 Luarel designed the cabinetry, and bed surround as well as the built in in the loft.'
     },
-
- {
-    images: ['img/kitchen.JPG'],
-    title: 'Kitchen Bay Window',
-    caption: 'between 2012 and 2014 the big bay window in the kitchen was installed, at the same time the garden was built.'
+    {
+        images: ['img/kitchen.JPG'],
+        title: 'Kitchen Bay Window',
+        caption: 'between 2012 and 2014 the big bay window in the kitchen was installed, at the same time the garden was built.'
     },
-
-      {
-    images: ['img/casa chica demo.jpg'],
-    title: 'Casa Chica Construction',
-    caption: '2014 here we are demoing the roof of Casa Chica.'
+    {
+        images: ['img/casa chica demo.jpg'],
+        title: 'Casa Chica Construction',
+        caption: '2014 here we are demoing the roof of Casa Chica.'
     },
-
-     {
-    images: ['img/casa chica stair pour.jpg'],
-    title: 'Casa Chica Construction',
-    caption: '2014 Here is the foundations of the stairs in casa chica.'
+    {
+        images: ['img/casa chica stair pour.jpg'],
+        title: 'Casa Chica Construction',
+        caption: '2014 Here is the foundations of the stairs in casa chica.'
     },
-
-     {
-    images: ['img/casa chica interor.jpg'],
-    title: 'Casa Chica Construction',
-    caption: '2014 Here we are finishing the interior of Casa Chica.'   
-},
-
-  {
-    images: ['img/casa chica king.jpg'],
-    title: 'Casa Chica Construction',
-    caption: '2014 Here we are finishing the interior of Casa Chica.'   
-},
-
-
+    {
+        images: ['img/casa chica interor.jpg'],
+        title: 'Casa Chica Construction',
+        caption: '2014 Here we are finishing the interior of Casa Chica.' 
+    },
+    {
+        images: ['img/casa chica king.jpg'],
+        title: 'Casa Chica Construction',
+        caption: '2014 Here we are finishing the interior of Casa Chica.' 
+    }
 ];

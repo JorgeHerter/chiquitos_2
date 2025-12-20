@@ -279,21 +279,23 @@ body {
     }
 
     .image-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         height: 70%;
         gap: 8px;
         padding: 10px;
-        justify-items: center;
-        align-items: center;
+        width: 100%;
     }
 
     .grid-item {
         grid-column: span 1 !important;
-        width: 100%;
-        max-width: 100%;
+        width: 90%;
+        max-width: 400px;
         height: auto;
         aspect-ratio: 16/9;
+        margin: 0 auto;
     }
 
     .grid-item:nth-child(n) {

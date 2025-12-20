@@ -264,19 +264,74 @@ body {
 }
 
 /* Mobile Responsive */
+/* --- Optimized Mobile Responsive --- */
 @media (max-width: 767px) {
     .page-header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .carousel-container {
         height: 600px;
     }
 
+    /* Force the grid to be a centered vertical stack */
+    .image-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Horizontally centers the items */
+        justify-content: flex-start !important; /* Starts stack from the top */
+        height: 70%;
+        width: 100%;
+        gap: 15px;
+        padding: 10px;
+        overflow-y: auto;
+        overflow-x: hidden; /* Prevents side-scrolling */
+    }
+
+    .grid-item {
+        /* Reset any grid logic from desktop */
+        grid-column: auto !important;
+        grid-row: auto !important;
+        
+        /* Centering Logic */
+        width: 90% !important; /* Leave a little breathing room on the sides */
+        max-width: 450px !important;
+        margin: 0 auto !important; /* Essential for centering in flex-column */
+        
+        height: auto !important;
+        aspect-ratio: 4/3; /* Keeps them looking consistent */
+        flex-shrink: 0;
+    }
+
+    .grid-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover !important; /* Fills the square/rectangle nicely */
+    }
+
+    /* Ensure standard single images also center */
     .carousel-image {
         height: 70%;
-        padding: 10px;
+        width: auto;
+        max-width: 95%;
+        margin: 0 auto;
     }
+
+    /* Fix the caption area */
+    .carousel-caption {
+        height: 30%;
+        padding: 15px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+}
 
     .image-grid {
         display: flex !important;
@@ -363,7 +418,7 @@ body {
         right: 20px;
         font-size: 40px;
     }
-}
+
 
 @media (min-width: 768px) {
     .carousel-container {

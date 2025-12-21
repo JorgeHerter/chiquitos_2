@@ -1,7 +1,20 @@
 const projectSlides = [
     {
-        title: 'Project Overview',
+        
         bullets: [
+            'Welcome to My Project',
+            'Click or swipe to navigate through.',
+            'Click on the images to zoom in.',
+            'Enjoy the visual journey!'
+            
+        ],
+        title: ''
+    },
+
+    {
+        
+        bullets: [
+            'Project Overview',
             'I arrived on-site in May 2009.',
             'Laurel had started on the project previously, and was working with an Architect named Gain Franco Cane',
             'Sebastian, and his crew were working on Chiquitos 4 at the same time.',
@@ -10,8 +23,46 @@ const projectSlides = [
             'During the first phase we completed much of what you see in Casa Grande Including the pool area, landscaping, bbq area, second level fountain.',
             'Laurel and Sebastian completed what is now the garden and garden bedroom area between 2012 and 2014, while I was in grad school',
             'between 2014 and 2018 we finished Casa Chica, in what became the largest phase of the project.'
-        ]
+        ],
+        title: ''
     },
+
+    {
+        images: ['img/fish pond.jpg'],
+        title: 'Fish Pond Area',
+        caption: 'In May of 2009, when I arrived onsite, the fish pond/BBQ area was my first project.'
+    },
+
+    {
+        images: [
+            'img/fish pond.jpg',
+        ],
+        title: 'Fish Pond Area',
+        caption: '2009/2010 We built the boveda ceiling over the fish pond area, all the railings and steel celosia.'
+    },
+
+    {
+        images: ['img/fish pond2.jpg'],
+        title: 'Fish Pond Area',
+        caption: '2009/2010 We built the boveda ceiling over the fish pond area, all the railings and steel celosia.'
+    },
+
+    {
+        images: [
+            'img/bbq2.jpg',
+            'img/bbq3.jpg'
+        ],
+        title: 'Fish Pond Area',
+        caption: '2009/2010 We built the boveda ceiling over the fish pond area, all the railings and steel celosia.'
+    },
+
+     {
+        images: [
+            'img/entryway.jpg'],
+        title: 'Casa Grande Entryway',
+        caption: '2009/2010 We built out the Cantera door surround, installed lights, fixed the skylight.'
+    },
+
     {
         images: [
             'img/tree of life1.JPG',
@@ -20,9 +71,19 @@ const projectSlides = [
             'img/tree of life4.JPG',
             'img/tree of life5.JPG'
         ],
-        title: 'Building the Tree of Life Fountain',
-        caption: 'Visual progression of the fountain construction.'
+        title: 'Building the Tree of Life Sculpture',
+        caption: 'Visual progression of the sculpture construction.'
     },
+{
+        images: [
+            'img/art studio.JPG',
+            'img/art studio2.JPG',
+          
+        ],
+        title: 'TV Room',
+        caption: 'This Room has been several things over time, we built and then demoed a massive concrete art table.'
+    },
+
     
     {
         images: ['img/ula darney.jpg'],
@@ -30,7 +91,7 @@ const projectSlides = [
         caption: '2009 I installed the Ula Darney chandalier and sconces.'
     },
     {
-        images: ['img/hallway.jpg'],
+        images: ['img/hallway2.jpg'],
         title: 'Casa Grande Construction',
         caption: '2009/2010 We installed new plumbing from the kitchen to the street.'
     },
@@ -88,14 +149,21 @@ const projectSlides = [
         caption: '2011/2012 We renovated the Green Room/bath, with new floor, parged walls, copper built-in decorations'
     },
     {
-        images: ['img/garden suite.jpg'],
+        images: [
+            'img/garden suite.jpg',
+            'img/garden.jpg'
+        ],
         title: 'Garden Bedroom',
         caption: '2012/2014 Laurel and Sebastian built the Garden Bedroom/bath incoperating design cues from the pool build.'
     },
     {
-        images: ['img/front room.jpg'],
+        images: [
+            'img/front room.jpg',
+            'img/entrybath.jpg'
+
+        ],
         title: 'Front Room Bed Surround',
-        caption: '2011/2012 Luarel designed the cabinetry, and bed surround as well as the built in in the loft.'
+        caption: '2011/2012 Luarel designed the cabinetry, and bed surround as well as the built in the loft. We remodeled the bath as well.'
     },
     {
         images: ['img/kitchen.JPG'],
@@ -121,5 +189,12 @@ const projectSlides = [
         images: ['img/casa chica king.jpg'],
         title: 'Casa Chica Construction',
         caption: '2014 Here we are finishing the interior of Casa Chica.' 
-    }
+    },
+      {
+        
+        bullets: [
+            'THE END'   
+        ],
+        title: ''
+    },
 ];

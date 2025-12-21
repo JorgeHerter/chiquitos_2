@@ -35,23 +35,20 @@ const projectSlides = [
 
     {
         images: [
-            'img/fish pond.jpg',
+            'img/bbq2.jpg',
         ],
         title: 'Fish Pond Area',
-        caption: '2009/2010 We built the boveda ceiling over the fish pond area, all the railings and steel celosia.'
+        caption: '2009 we cold molded the concrete bar area, the sink, the arch leading to the fish pond, added paint and lights.'
     },
 
     {
         images: ['img/fish pond2.jpg'],
         title: 'Fish Pond Area',
-        caption: '2009/2010 We built the boveda ceiling over the fish pond area, all the railings and steel celosia.'
+        caption: '2009/2010'
     },
 
     {
-        images: [
-            'img/bbq2.jpg',
-            'img/bbq3.jpg'
-        ],
+        images: ['img/bbq3.jpg' ],
         title: 'Fish Pond Area',
         caption: '2009/2010 We built the boveda ceiling over the fish pond area, all the railings and steel celosia.'
     },

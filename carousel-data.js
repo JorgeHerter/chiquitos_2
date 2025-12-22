@@ -8,7 +8,7 @@ const projectSlides = [
             'Enjoy the visual journey!'
             
         ],
-        title: ''
+        
     },
 
     {

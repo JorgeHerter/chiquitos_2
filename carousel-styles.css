@@ -1,10 +1,14 @@
-/* CSS Variables matching your portfolio */
+/* CSS Variables - Masculine Industrial Theme */
 :root {
-    --primary-color: #007bff;
+    --primary-color: #d4582a;
     --secondary-color: #6c757d;
-    --dark-bg-color: #343a40;
+    --dark-bg-color: #2c3e50;
+    --darker-bg-color: #1a252f;
     --light-text-color: #f8f9fa;
     --dark-text-color: #212529;
+    --steel-gray: #343a40;
+    --rust-orange: #d4582a;
+    --rust-dark: #b94a23;
     --shadow-light: rgba(0, 0, 0, 0.1);
     --shadow-medium: rgba(0, 0, 0, 0.3);
     --shadow-strong: rgba(0, 0, 0, 0.5);
@@ -25,16 +29,16 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     padding-bottom: 60px;
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 25%, #ff9a9e 50%, #fad0c4 75%, #ffecd2 100%);
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 25%, #1a252f 50%, #0d0f11 75%, #000000 100%);
     background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-    color: var(--dark-text-color);
+    animation: gradientShift 20s ease infinite;
+    color: var(--light-text-color);
 }
 
 @keyframes gradientShift {
@@ -43,51 +47,34 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Navigation */
-.navbar {
-    background-color: rgba(52, 58, 64, 0.8) !important;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 2px 5px var(--shadow-light);
-    padding: 1rem 0;
-}
-
-.navbar-brand {
-    color: var(--light-text-color) !important;
-    font-weight: 600;
-}
-
-.navbar-nav .nav-link {
-    color: var(--light-text-color) !important;
-    font-weight: 500;
-    transition: color 0.3s;
-    padding: 0.5rem 1rem;
-}
-
-.navbar-nav .nav-link:hover {
-    color: var(--primary-color) !important;
-}
-
-/* Page Header */
+/* Page Header - Industrial Dark Theme */
 .page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 50%, #0d0f11 100%);
     color: white;
     padding: 3rem 2rem 2rem;
     text-align: center;
-    margin-top: 56px;
+    border-bottom: 4px solid var(--rust-orange);
+    box-shadow: 0 4px 20px rgba(212, 88, 42, 0.3);
 }
 
 .page-header h1 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px var(--shadow-medium);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 88, 42, 0.4);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
 .page-header p {
+    font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 1.1rem;
     opacity: 0.95;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0.5rem auto;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 /* Main Content */
@@ -96,16 +83,19 @@ body {
     padding: var(--spacing-xl) var(--spacing-md);
 }
 
-/* Carousel Container */
+/* Carousel Container - Enhanced with Industrial Look */
 .carousel-container {
     max-width: 1100px;
     height: 700px;
     margin: 0 auto;
-    background: transparent;
+    background: rgba(44, 62, 80, 0.2);
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
+    border-radius: 12px;
+    border: 3px solid rgba(212, 88, 42, 0.4);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 100px rgba(212, 88, 42, 0.2);
 }
 
 .carousel-wrapper {
@@ -142,62 +132,78 @@ body {
     padding: 15px;
     display: block;
     cursor: zoom-in;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .carousel-image:hover {
     transform: scale(1.03);
+    filter: brightness(1.1);
 }
 
-.carousel-caption {
+/* Captions - Bold Industrial Style with Better Contrast */
+.slide-caption {
     width: 100%;
     height: 25%;
-    padding: 10px 20px;
-    background: transparent;
+    padding: 15px 20px;
+    background: linear-gradient(180deg, rgba(248, 249, 250, 0.95) 0%, rgba(233, 236, 239, 0.95) 100%);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow-y: auto;
+    border-top: 3px solid var(--rust-orange);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-caption h3 {
-    margin-bottom: 8px;
-    font-size: 1.6rem;
-    color: var(--dark-text-color);
+.slide-caption h3 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    margin: 0 auto 8px auto;
+    font-size: 1.8rem;
+    color: #1a252f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-shadow: 2px 2px 0px rgba(212, 88, 42, 0.4);
 }
 
-.carousel-caption p {
+.slide-caption p {
+    font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 1.1rem;
-    color: #444;
+    color: #2c3e50;
     max-width: 850px;
     margin: 0 auto;
-    line-height: 1.4;
+    line-height: 1.5;
+    font-weight: 600;
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons - Rust Orange Industrial */
 .carousel-btn {
     position: absolute;
     top: 37.5%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--rust-orange) 0%, var(--rust-dark) 100%);
     color: white;
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: bold;
     transition: all 0.3s;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 6px 16px rgba(212, 88, 42, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(135deg, var(--rust-dark) 0%, #9a3a1c 100%);
+    box-shadow: 0 8px 24px rgba(212, 88, 42, 0.7);
+    transform: translateY(-50%) scale(1.05);
 }
 
 .carousel-btn:active {
@@ -212,239 +218,212 @@ body {
     right: 15px;
 }
 
-/* Dots Indicator */
+/* Dots Indicator - Industrial Style */
 .carousel-dots {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     padding: var(--spacing-lg);
-    background: white;
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 2px solid var(--rust-orange);
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: #ddd;
     cursor: pointer;
     transition: all 0.3s;
+    border: 2px solid var(--secondary-color);
 }
 
 .dot.active {
-    background: var(--primary-color);
-    transform: scale(1.2);
+    background: var(--rust-orange);
+    border-color: var(--rust-dark);
+    transform: scale(1.3);
+    box-shadow: 0 0 12px rgba(212, 88, 42, 0.6);
 }
 
 .dot:hover {
     background: var(--secondary-color);
+    transform: scale(1.1);
 }
 
-/* Counter */
+/* Counter - Industrial Dark */
 .carousel-counter {
     text-align: center;
     padding: var(--spacing-sm);
-    background: #f8f9fa;
-    color: var(--secondary-color);
-    font-size: 0.9rem;
+    background: linear-gradient(135deg, var(--steel-gray) 0%, var(--dark-text-color) 100%);
+    color: var(--light-text-color);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-top: 2px solid var(--rust-orange);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Footer */
+/* Footer - Industrial */
 .footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--dark-bg-color);
+    background: linear-gradient(135deg, var(--dark-bg-color) 0%, var(--darker-bg-color) 100%);
     color: var(--light-text-color);
     text-align: center;
     padding: var(--spacing-md) 0;
     font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
     z-index: 1000;
-    box-shadow: 0 -2px 10px var(--shadow-medium);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+    border-top: 3px solid var(--rust-orange);
 }
 
-/* Mobile Responsive */
-/* --- Optimized Mobile Responsive --- */
-@media (max-width: 767px) {
-    .page-header h1 {
-        font-size: 1.8rem;
-    }
-
-    .carousel-container {
-        height: 600px;
-    }
-
-    /* Force the grid to be a centered vertical stack */
-    .image-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important; /* Horizontally centers the items */
-        justify-content: flex-start !important; /* Starts stack from the top */
-        height: 70%;
-        width: 100%;
-        gap: 15px;
-        padding: 10px;
-        overflow-y: auto;
-        overflow-x: hidden; /* Prevents side-scrolling */
-    }
-
-    .grid-item {
-        /* Reset any grid logic from desktop */
-        grid-column: auto !important;
-        grid-row: auto !important;
-        
-        /* Centering Logic */
-        width: 90% !important; /* Leave a little breathing room on the sides */
-        max-width: 450px !important;
-        margin: 0 auto !important; /* Essential for centering in flex-column */
-        
-        height: auto !important;
-        aspect-ratio: 4/3; /* Keeps them looking consistent */
-        flex-shrink: 0;
-    }
-
-    .grid-photo {
-        width: 100%;
-        height: 100%;
-        object-fit: cover !important; /* Fills the square/rectangle nicely */
-    }
-
-    /* Ensure standard single images also center */
-    .carousel-image {
-        height: 70%;
-        width: auto;
-        max-width: 95%;
-        margin: 0 auto;
-    }
-
-    /* Fix the caption area */
-    .carousel-caption {
-        height: 30%;
-        padding: 15px;
-    }
-
-    .carousel-caption h3 {
-        font-size: 1.2rem;
-    }
-
-    .carousel-caption p {
-        font-size: 0.9rem;
-        line-height: 1.3;
-    }
-}
-
-    .image-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        height: 70%;
-        gap: 8px;
-        padding: 10px;
-        width: 100%;
-        overflow-y: auto;
-    }
-
-    .grid-item {
-        grid-column: auto !important;
-        grid-row: auto !important;
-        width: 90% !important;
-        max-width: 400px !important;
-        height: auto !important;
-        min-height: 200px;
-        aspect-ratio: 16/9;
-        margin: 0 auto;
-        flex-shrink: 0;
-    }
-
-    .grid-photo {
-        object-fit: contain !important;
-    }
-
-    .text-slide-content {
-        height: 70%;
-        padding: 15px 20px;
-    }
-
-    .embed-slide-content {
-        height: 70%;
-        padding: 15px;
-    }
-
-    .embed-slide-content .airbnb-embed-frame {
-        width: 100% !important;
-        max-width: 350px !important;
-        height: auto !important;
-    }
-
-    .bullet-list {
-        font-size: 0.9rem;
-    }
-
-    .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-
-    .carousel-btn.prev {
-        left: 10px;
-    }
-
-    .carousel-btn.next {
-        right: 10px;
-    }
-
-    .slide-caption {
-        height: 30%;
-        padding: var(--spacing-md);
-        overflow-y: auto;
-    }
-
-    .slide-caption h3 {
-        font-size: 1.3rem;
-    }
-
-    .slide-caption p {
-        font-size: 0.95rem;
-    }
-
-    body {
-        padding-bottom: 70px;
-    }
-
-    .zoom-close {
-        top: 10px;
-        right: 20px;
-        font-size: 40px;
-    }
-
-
-@media (min-width: 768px) {
-    .carousel-container {
-        height: 700px;
-    }
-}
-
-@media (min-width: 992px) {
-    .page-header h1 {
-        font-size: 3rem;
-    }
-}
-
-/* Text Slide Content */
+/* Text Slide Content - Enhanced */
+/* Text Slide Content - Styled to match Captions */
+/* --- Unified Text Slide Content --- */
 .text-slide-content {
     width: 100%;
-    height: 75%;
+    height: 100%; /* Changed to 100% to fill the entire carousel frame */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 40px;
-    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    /* High-contrast industrial document background */
+    background: linear-gradient(180deg, rgba(248, 249, 250, 0.98) 0%, rgba(233, 236, 239, 0.98) 100%);
     overflow-y: auto;
+    position: relative;
 }
 
-/* Embed Slide Content (Airbnb, etc.) */
+/* Add a subtle "technical document" border on the left */
+.text-slide-content::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: var(--rust-orange);
+}
+
+/* Title inside the Text Slide */
+.text-slide-content h3 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 2.5rem; /* Slightly larger for the main header */
+    color: #1a252f;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0px rgba(212, 88, 42, 0.1);
+    border-bottom: 2px solid var(--rust-orange);
+    padding-bottom: 10px;
+}
+
+/* Optimized Bullet List */
+.bullet-list {
+    text-align: left;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    padding-left: 25px;
+    max-width: 800px;
+    list-style: none; /* Removing default dots to use custom squares */
+}
+
+.bullet-list li {
+    margin-bottom: 18px;
+    position: relative;
+    font-weight: 600; /* Bold for industrial impact */
+}
+
+/* Custom Industrial Bullet (Square Marker) */
+.bullet-list li::before {
+    content: "■"; 
+    color: var(--rust-orange);
+    position: absolute;
+    left: -25px; /* Positions square in the padding area */
+    font-size: 1.1rem;
+}
+
+/* Mobile Tweak */
+@media (max-width: 767px) {
+    .text-slide-content {
+        padding: 30px 20px;
+        justify-content: flex-start; /* Better for scrolling on phones */
+    }
+    
+    .text-slide-content h3 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    
+    .bullet-list {
+        font-size: 1rem;
+    }
+}
+
+/* Title inside the Text Slide */
+.text-slide-content h3 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 2.2rem;
+    color: #1a252f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 0px rgba(212, 88, 42, 0.2);
+}
+
+.bullet-list {
+    text-align: left;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #2c3e50; /* Darker blue-gray for maximum readability */
+    padding-left: 20px;
+    max-width: 850px;
+    font-weight: 600; /* Bolded for industrial feel */
+}
+
+.bullet-list li {
+    margin-bottom: 15px;
+    position: relative;
+    list-style: none; /* We will use a custom rust-orange marker */
+}
+
+/* Custom Industrial Bullet Point */
+.bullet-list li::before {
+    content: "■"; /* Square bullet for industrial look */
+    color: var(--rust-orange);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1.5em;
+    margin-left: -1.5em;
+}
+
+.bullet-list {
+    text-align: left;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--dark-bg-color);
+    padding-left: 20px;
+    max-width: 800px;
+    font-weight: 500;
+}
+
+.bullet-list li {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.bullet-list li::marker {
+    color: var(--rust-orange);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Embed Slide Content */
 .embed-slide-content {
     width: 100%;
     height: 75%;
@@ -452,7 +431,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(44, 62, 80, 0.05);
     overflow: hidden;
 }
 
@@ -461,23 +440,11 @@ body {
     max-width: 100%;
     max-height: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(212, 88, 42, 0.3);
 }
 
-.bullet-list {
-    text-align: left;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-    padding-left: 20px;
-    max-width: 800px;
-}
-
-.bullet-list li {
-    margin-bottom: 10px;
-}
-
-/* Image Grid for Multiple Images */
+/* Image Grid - Industrial Enhancement with Centered Items */
 .image-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -488,15 +455,25 @@ body {
     padding: 15px;
     justify-items: center;
     align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .grid-item {
     overflow: hidden;
     border-radius: 8px;
     background-color: rgba(0,0,0,0.05);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100%;
+    border: 2px solid rgba(212, 88, 42, 0.3);
+    transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+    border-color: var(--rust-orange);
+    box-shadow: 0 8px 24px rgba(212, 88, 42, 0.4);
+    transform: translateY(-2px);
 }
 
 .grid-photo {
@@ -504,12 +481,13 @@ body {
     height: 100%;
     object-fit: cover;
     cursor: zoom-in;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
     display: block;
 }
 
 .grid-photo:hover {
     transform: scale(1.03);
+    filter: brightness(1.1);
 }
 
 /* Grid Layout for 2 images */
@@ -536,26 +514,36 @@ body {
 .image-grid:has(.grid-item:nth-child(5):last-child) .grid-item:nth-child(5) { grid-column: span 2; }
 
 /* Zoom Lightbox */
+/* The container for the zoomed image */
 #zoomOverlay {
-    display: none;
+    display: none; 
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    top: 0; left: 0;
+    width: 100vw; /* Use viewport units for full coverage */
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95); /* Darker background for better focus */
     z-index: 9999;
     justify-content: center;
     align-items: center;
     cursor: zoom-out;
+    backdrop-filter: blur(10px); /* Optional: blurs the background content */
 }
 
+/* The zoomed image itself */
 .zoom-img {
-    max-width: 90%;
-    max-height: 85%;
+    /* Key change: allows it to grow to the screen edges */
+    max-width: 98vw;  /* Leave a tiny 1% gap on sides */
+    max-height: 98vh; /* Leave a tiny 1% gap on top/bottom */
+    
+    width: auto;      /* Let the browser calculate the width */
+    height: auto;     /* Let the browser calculate the height */
+    
+    /* Essential: ensures the image isn't stretched */
+    object-fit: contain; 
+    
     border-radius: 4px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    cursor: default;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    cursor: default; /* Indicates clicking the image won't close it */
 }
 
 .zoom-close {
@@ -564,17 +552,142 @@ body {
     right: 40px;
     color: white;
     font-size: 50px;
+    font-weight: bold;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .zoom-close:hover {
-    color: var(--primary-color);
+    color: var(--rust-orange);
+    transform: scale(1.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .page-header h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    .carousel-container {
+        height: 600px;
+        border-width: 2px;
+    }
+
+    .image-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        height: 70%;
+        width: 100%;
+        gap: 15px;
+        padding: 10px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .grid-item {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 90% !important;
+        max-width: 450px !important;
+        margin: 0 auto !important;
+        height: auto !important;
+        aspect-ratio: 4/3;
+        flex-shrink: 0;
+    }
+
+    .grid-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover !important;
+    }
+
+    .carousel-image {
+        height: 70%;
+        width: auto;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .slide-caption {
+        height: 30%;
+        padding: 15px;
+    }
+
+    .slide-caption h3 {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    .slide-caption p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .text-slide-content {
+        height: 70%;
+        padding: 15px 20px;
+    }
+
+    .embed-slide-content {
+        height: 70%;
+        padding: 15px;
+    }
+
+    .embed-slide-content .airbnb-embed-frame {
+        width: 100% !important;
+        max-width: 350px !important;
+        height: auto !important;
+    }
+
+    .bullet-list {
+        font-size: 0.95rem;
+    }
+
+    .carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+
+    .carousel-btn.prev {
+        left: 10px;
+    }
+
+    .carousel-btn.next {
+        right: 10px;
+    }
+
+    body {
+        padding-bottom: 70px;
+    }
+
+    .zoom-close {
+        top: 10px;
+        right: 20px;
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-container {
+        height: 700px;
+    }
+}
+
+@media (min-width: 992px) {
+    .page-header h1 {
+        font-size: 3.5rem;
+    }
 }
 
 /* Loading State */
 .loading {
     text-align: center;
     padding: 3rem;
-    color: var(--secondary-color);
+    color: var(--light-text-color);
+    font-weight: 600;
 }

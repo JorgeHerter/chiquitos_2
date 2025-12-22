@@ -4,74 +4,82 @@ let touchStartX = 0;
 let touchEndX = 0;
 
 // Initialize Carousel
+/**
+ * Generates the HTML for a single slide based on its content type.
+ */
+function createSlideHTML(slide) {
+    const isTextSlide = slide.bullets && Array.isArray(slide.bullets);
+    
+    // 1. Logic for Text-Only Slides (Unified look)
+    if (isTextSlide) {
+        return `
+            <div class="text-slide-content">
+                <h3>${slide.title || ''}</h3>
+                <ul class="bullet-list">
+                    ${slide.bullets.map(point => `<li>${point}</li>`).join('')}
+                </ul>
+            </div>`;
+    }
+
+    // 2. Logic for Media Slides (Embeds, Grids, or Single Images)
+    let mediaHTML = '';
+    
+    if (slide.embed) {
+        mediaHTML = `<div class="embed-slide-content">${slide.embed}</div>`;
+    } 
+    else if (slide.images && slide.images.length > 1) {
+        mediaHTML = `
+            <div class="image-grid">
+                ${slide.images.map(img => `
+                    <div class="grid-item">
+                        <img src="${img}" class="grid-photo zoomable">
+                    </div>`).join('')}
+            </div>`;
+    } 
+    else {
+        const imgSrc = slide.image || (slide.images && slide.images[0]);
+        mediaHTML = imgSrc ? `<img src="${imgSrc}" class="carousel-image zoomable">` : '';
+    }
+
+    // Return media + the standard caption footer
+    return `
+        ${mediaHTML}
+        <div class="slide-caption">
+            <h3>${slide.title || ''}</h3>
+            <p>${slide.caption || ''}</p> 
+        </div>`;
+}
+
+/**
+ * Main function to build the carousel
+ */
 function initCarousel() {
     const track = document.getElementById('carouselTrack');
     const dotsContainer = document.getElementById('dotsContainer');
     const totalSlidesEl = document.getElementById('totalSlides');
 
+    if (!track || !dotsContainer) return;
+
     track.innerHTML = '';
     dotsContainer.innerHTML = '';
 
     projectSlides.forEach((slide, index) => {
+        // Create Slide Element
         const slideEl = document.createElement('div');
         slideEl.className = 'carousel-slide';
-
-        let contentHTML = '';
-
-        // 1. Logic for Embed (Airbnb, etc.)
-        if (slide.embed) {
-            contentHTML = `
-                <div class="embed-slide-content">
-                    ${slide.embed}
-                </div>`;
-        }
-        // 2. Logic for Bullets
-        else if (slide.bullets && Array.isArray(slide.bullets)) {
-            contentHTML = `
-                <div class="text-slide-content">
-                    <ul class="bullet-list">
-                        ${slide.bullets.map(point => `<li>${point}</li>`).join('')}
-                    </ul>
-                </div>`;
-        } 
-        // 3. Logic for Multiple Images (Array of 2 or more)
-        else if (slide.images && Array.isArray(slide.images) && slide.images.length > 1) {
-            contentHTML = `
-                <div class="image-grid">
-                    ${slide.images.map(imgSrc => `
-                        <div class="grid-item">
-                            <img src="${imgSrc}" class="grid-photo zoomable">
-                        </div>
-                    `).join('')}
-                </div>`;
-        } 
-        // 4. Logic for Single Image (Either as a string OR as an array with 1 item)
-        else {
-            const imgSrc = slide.image || (slide.images && slide.images[0]);
-            if (imgSrc) {
-                contentHTML = `<img src="${imgSrc}" class="carousel-image zoomable">`;
-            }
-        }
-
-        slideEl.innerHTML = `
-            ${contentHTML}
-            <div class="slide-caption" style="text-align: center;">
-                <h3 style="text-align: center; margin: 0 auto;">${slide.title || ''}</h3>
-                <p style="text-align: center; margin: 0 auto;">${slide.caption || ''}</p> 
-            </div>
-        `;
+        slideEl.innerHTML = createSlideHTML(slide);
         track.appendChild(slideEl);
 
+        // Create Dot Element
         const dot = document.createElement('div');
-        dot.className = 'dot' + (index === 0 ? ' active' : '');
+        dot.className = `dot ${index === 0 ? 'active' : ''}`;
         dot.onclick = () => goToSlide(index);
         dotsContainer.appendChild(dot);
     });
 
-    if(totalSlidesEl) totalSlidesEl.textContent = projectSlides.length;
+    if (totalSlidesEl) totalSlidesEl.textContent = projectSlides.length;
     updateCarousel();
 }
-
 /**
  * Zoom Logic using Event Delegation
  * This listens for clicks on any element with the 'zoomable' class

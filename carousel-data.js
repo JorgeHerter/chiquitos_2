@@ -102,7 +102,7 @@ const projectSlides = [
         images: [
             'img/fushia bath1.JPG',
             'img/fushia bath2.JPG',
-            'img/fushia bath3.JPG',  
+            'img/fushia bath3.jpg',  
         ],
         title: 'Building the tub and renovating the Fushia Bathroom',
         caption: '2009/2010 Here we are installing the tub and renovating the Fushia Bathroom.'
@@ -113,14 +113,7 @@ const projectSlides = [
         title: 'Casa Grande Construction',
         caption: '2009/2010 This is the third floor while we were under construction. Note the massive pine tree to the left that died and was eventually removed.'
     },
-
-    {
-        images: ['img/fish sculpture.jpg'],
-        title: 'Casa Grande Construction',
-        caption: '2009 Here is the fish sculpture that we installed at the fish pond.'
-    },
-
-    
+ 
     {
         images: ['img/ula darney.jpg'],
         title: 'Casa Grande Construction',
@@ -179,11 +172,15 @@ const projectSlides = [
         title: 'Moroccan Suite',
         caption: '2011/2012 After all the construction in the previous slide, this was the result'
     },
+
+    
+
     {
-        images: ['img/green room.jpg'],
-        title: 'Green Master Bedroom',
-        caption: '2011/2012 We renovated the Green Room/bath, with new floor, parged walls, copper built-in decorations'
+        images: ['img/drone shot.jpg'],
+        title: 'Drone Shot',
+        caption: 'Maybe 2014 A drone shot of the property lines.'
     },
+
     {
         images: [
             'img/garden suite.jpg',
@@ -195,6 +192,7 @@ const projectSlides = [
     {
         images: [
             'img/front room.jpg',
+            'img/front room2.jpg',
             'img/entrybath.jpg'
 
         ],
@@ -207,7 +205,11 @@ const projectSlides = [
         caption: 'between 2012 and 2014 the big bay window in the kitchen was installed, at the same time the garden was built.'
     },
     {
-        images: ['img/casa chica demo.jpg'],
+        images: [
+            'img/casa chica demo.jpg',
+            'img/casa chica demo2.jpg'
+
+        ],
         title: 'Casa Chica Construction',
         caption: '2014 here we are demoing the roof of Casa Chica.'
     },
@@ -217,12 +219,20 @@ const projectSlides = [
         caption: '2014 Here is the foundations of the stairs in casa chica.'
     },
     {
-        images: ['img/casa chica interor.jpg'],
+        images: [
+            'img/casa chica interior2.jpg',
+            'img/casa chica interor.jpg'
+            
+        ],
         title: 'Casa Chica Construction',
         caption: '2014 Here we are finishing the interior of Casa Chica.' 
     },
     {
-        images: ['img/casa chica king.jpg'],
+        images: [
+            'img/casa chica king2.jpg',
+            'img/casa chica king.jpg'
+            
+        ],
         title: 'Casa Chica Construction',
         caption: '2014 Here we are finishing the interior of Casa Chica.' 
     },

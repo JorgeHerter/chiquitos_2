@@ -66,6 +66,18 @@ const projectSlides = [
         title: 'Building the Tree of Life Sculpture',
         caption: 'Visual progression of the sculpture construction.'
     },
+
+     {
+        images: [
+            
+            'img/stair enclosure.JPG',
+            'img/stair enclosure2.JPG'
+
+        ],
+        title: 'Casa Grande Construction',
+        caption: '2009 Here we are installing the carpentry for the stair enclosure.'
+    },
+
 {
         images: [
             'img/art studio.JPG',
@@ -74,6 +86,38 @@ const projectSlides = [
         ],
         title: 'TV Room',
         caption: 'This Room has been several things over time, we built and then demoed a massive concrete art table.'
+    },
+
+     {
+        images: [
+            'img/boveda1.JPG',
+            'img/boveda2.JPG',
+            'img/boveda3.JPG',  
+        ],
+        title: 'Building the boveda in front of the BBQ area',
+        caption: 'Early 2010 this is the formwork and initial stages of the boveda construction.'
+    },
+
+     {
+        images: [
+            'img/fushia bath1.JPG',
+            'img/fushia bath2.JPG',
+            'img/fushia bath3.JPG',  
+        ],
+        title: 'Building the tub and renovating the Fushia Bathroom',
+        caption: '2009/2010 Here we are installing the tub and renovating the Fushia Bathroom.'
+    },
+
+    {
+        images: ['img/third floor.JPG'],
+        title: 'Casa Grande Construction',
+        caption: '2009/2010 This is the third floor while we were under construction. Note the massive pine tree to the left that died and was eventually removed.'
+    },
+
+    {
+        images: ['img/fish sculpture.jpg'],
+        title: 'Casa Grande Construction',
+        caption: '2009 Here is the fish sculpture that we installed at the fish pond.'
     },
 
     

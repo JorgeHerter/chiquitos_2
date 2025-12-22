@@ -173,7 +173,6 @@ const projectSlides = [
         caption: '2011/2012 After all the construction in the previous slide, this was the result'
     },
 
-    
 
     {
         images: ['img/drone shot.jpg'],

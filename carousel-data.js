@@ -80,12 +80,13 @@ const projectSlides = [
 
 {
         images: [
-            'img/art studio.JPG',
-            'img/art studio2.JPG',
+            'img/art studio.jpg',
+            'img/art studio3.jpg',
+            'img/art studio2.jpg',
           
         ],
         title: 'TV Room',
-        caption: 'This Room has been several things over time, we built and then demoed a massive concrete art table.'
+        caption: 'This Room has been several things over time, we built and then demo-eded a massive concrete art table and fountain.'
     },
 
      {
